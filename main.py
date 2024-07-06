@@ -21,7 +21,7 @@ class User(BaseModel):
 # Because we want to fetch public key on start
 # Later we would verify incoming JWT tokens
 try:
-    r = requests.get("http://localhost:8080/auth/realms/master",
+    r = requests.get("http://niko-suse-laptop.niko.io:7080/auth/realms/basic",
                      timeout=3)
     r.raise_for_status()
     response_json = r.json()
